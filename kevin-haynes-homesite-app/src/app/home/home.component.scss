@@ -1,0 +1,33 @@
+.circular--portrait {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #1d1d1d;
+}
+
+.circular--portrait img {
+  width: 100%;
+  height: auto;
+  text-shadow: 40px 50px;
+  box-shadow: #1d1d1d;
+}
+
+.nav-logo {
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: .25rem;
+  width: 35px;
+  height: 35px;
+}
+
+h1 {
+  text-shadow: 4px 4px #1d1d1d;
+}
+
+span {
+  text-shadow: 4px 4px #1d1d1d;
+}
