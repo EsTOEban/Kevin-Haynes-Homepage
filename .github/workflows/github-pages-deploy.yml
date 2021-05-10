@@ -15,7 +15,9 @@ jobs:
       working-directory: ./kevin-haynes-homesite-app
     - run: npm install -g @angular/cli > /dev/null
       working-directory: ./kevin-haynes-homesite-app
-    - run: ng build --prod --verbose
+    - run: |
+        ng build --prod --verbose
+        cat */angular-errors.log
       working-directory: ./kevin-haynes-homesite-app
     
     - name: Deploy
@@ -24,8 +26,6 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./kevin-haynes-homesite-app/dist
         
-    - name: Cat errors
-      run: cat */angular-errors.log
 #     - name: Publish generated content to GitHub Pages
 #       uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
 #       with:
