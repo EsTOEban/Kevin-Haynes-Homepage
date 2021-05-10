@@ -1,9 +1,9 @@
 {
-  "name": "kevin-haynes-personal-site-app",
+  "name": "kevin-haynes-homesite-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -o",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~11.2.11",
     "@angular/router": "~11.2.11",
     "@fortawesome/fontawesome-free": "^5.15.1",
+    "angular-particle": "^1.0.4",
     "mdb-angular-ui-kit": "^1.0.0-beta3",
     "mdb-ui-kit": "^3.5.0",
     "rxjs": "~6.6.0",

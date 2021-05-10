@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "kevin-haynes-personal-site-app": {
+    "kevin-haynes-homesite-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/kevin-haynes-personal-site-app",
+            "outputPath": "dist/kevin-haynes-homesite-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "kevin-haynes-personal-site-app:build"
+            "browserTarget": "kevin-haynes-homesite-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "kevin-haynes-personal-site-app:build:production"
+              "browserTarget": "kevin-haynes-homesite-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "kevin-haynes-personal-site-app:build"
+            "browserTarget": "kevin-haynes-homesite-app:build"
           }
         },
         "test": {
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "kevin-haynes-personal-site-app:serve"
+            "devServerTarget": "kevin-haynes-homesite-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "kevin-haynes-personal-site-app:serve:production"
+              "devServerTarget": "kevin-haynes-homesite-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "kevin-haynes-personal-site-app"
+  "defaultProject": "kevin-haynes-homesite-app"
 }
