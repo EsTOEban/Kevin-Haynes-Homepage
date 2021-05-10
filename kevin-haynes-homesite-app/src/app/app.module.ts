@@ -11,8 +11,6 @@ import { WorkOverviewComponent } from './work-overview/work-overview.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ParticlesModule } from "angular-particle";
-
 
 @NgModule({
   declarations: [
@@ -28,8 +26,7 @@ import { ParticlesModule } from "angular-particle";
     BrowserModule,
     AppRoutingModule,
     MdbModule,
-    BrowserAnimationsModule,
-    ParticlesModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
