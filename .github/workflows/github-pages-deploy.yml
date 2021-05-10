@@ -1,4 +1,4 @@
-name: CI
+name: Deploy Site to Github-Pages
 on:
   push:
     branches: [ main ]
@@ -8,14 +8,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - run: cd kevin-haynes-homesite-app
-    - run: pwd
     - uses: actions/setup-node@v1 #this will install Node and npm on Ubuntu
       with:
         node-version: '12.x'
     - run: npm install
+      working-directory: ./kevin-haynes-homesite-app
     - run: npm install -g @angular/cli > /dev/null
+      working-directory: ./kevin-haynes-homesite-app
     - run: ng build --prod --output-path=dist
+      working-directory: ./kevin-haynes-homesite-app
     
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
