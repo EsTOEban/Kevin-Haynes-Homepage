@@ -27,6 +27,6 @@ jobs:
     - name: Publish generated content to GitHub Pages
       uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
       with:
-          dir: dist
+          dir: ./kevin-haynes-homesite-app/dist
           branch: gh-pages
           token: ${{ secrets.GITHUB_TOKEN }}
