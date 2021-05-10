@@ -15,7 +15,7 @@ jobs:
       working-directory: ./kevin-haynes-homesite-app
     - run: npm install -g @angular/cli > /dev/null
       working-directory: ./kevin-haynes-homesite-app
-    - run: ng build --prod --output-path=dist
+    - run: ng build --prod
       working-directory: ./kevin-haynes-homesite-app
     
     - name: Deploy
