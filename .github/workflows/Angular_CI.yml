@@ -1,0 +1,31 @@
+name: Deploy Site to Github-Pages 2
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1 #this will install Node and npm on Ubuntu
+      with:
+        node-version: '12.16.3'
+        
+    - run: npm install
+      working-directory: ./kevin-haynes-homesite-app
+      
+#     - run: npm install -g @angular/cli > /dev/null
+#       working-directory: ./kevin-haynes-homesite-app
+      
+    - run: npm install -g @angular/cli > /dev/null
+      working-directory: ./kevin-haynes-homesite-app
+      
+    - run: ng build --prod --verbose
+      working-directory: ./kevin-haynes-homesite-app
+    
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./kevin-haynes-homesite-app/dist
