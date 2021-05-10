@@ -9,6 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - run: cd kevin-haynes-homesite-app
+    - run: pwd
     - uses: actions/setup-node@v1 #this will install Node and npm on Ubuntu
       with:
         node-version: '12.x'
